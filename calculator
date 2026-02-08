@@ -1,4 +1,3 @@
-
 import math
 while True:
     first = input("Какую операцию вы хотите выполнить?\n1 -> Сложение\n2 -> Вычитание\n3 -> Умножение\n4 -> Деление\n5 -> Возведение в квадрат\n6 -> Вычисление квадратного корня\n7 -> Вычисление синуса  числа\n8 -> Вычисление косинуса числа\n9 -> Возведение в n-ную степень\n'Выход' для выхода из программы. ")
@@ -62,7 +61,7 @@ while True:
     elif first == 7:
         second = input("Введите желаемое число: ")
         second = int(second)
-        print(f"Результат операции = {math.sin(math.radians(second))}")
+        print(f"Результат операции = {round(math.sin(math.radians(second)), 1)}")
     elif first == 8:
         second = input("Введите желаемое число: ")
         second = int(second)

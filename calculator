@@ -1,0 +1,52 @@
+import math
+import random
+while True:
+    first = input("Какую операцию вы хотите выполнить?\n1 -> Сложение\n2 -> Вычитание\n3 -> Умножение\n4 -> Деление\n5 -> Возведение в квадрат\n6 -> Вычисление квадратного корня\n7 -> Вычисление синуса  числа\n8 -> Вычисление косинуса числа\n9 -> Возведение в n-ную степень ")
+    if str.isnumeric(first) == False:
+        print("Нужно ввести число от 1 до 9. Попробуйте еще раз.")
+        continue
+    first = int(first)
+    if first == 1:
+        second = input("Введите первое число: ")
+        third = input("Введите второе число: ")
+        print(f"Результат операции = {second + third}")
+    elif first == 2:
+        second = input("Введите первое число: ")
+        third = input("Введите второе число: ")
+        print(f"Результат операции = {second - third}")
+    elif first == 3:
+        second = input("Введите первое число: ")
+        third = input("Введите второе число: ")
+        print(f"Результат операции = {second * third}")
+    elif first == 4:
+        ostatok = input("Как будет проходить деление?\n1 -> С остатком\n2 -> Без остатка ")
+        if ostatok == 1:
+            second = input("Введите первое число: ")
+            third = input("Введите второе число: "))
+            print(f"Результат операции = {round(second / third, 1)}")
+        if ostatok == 2:
+            second = input("Введите первое число: ")
+            third = input("Введите второе число: ")
+            print(f"Результат операции = {math.floor(second / third)}")
+        if ostatok > 2 or ostatok < 1:
+            print("Выбранного варианта не существует!")
+            continue
+    elif first == 5:
+        second = input("Введите нужное число: ")
+        print(f"Результат операции = {math.ceil(math.pow(second, 2))}")
+    elif first == 6:
+        second = input("Введите желаемое число: ")
+        print(f"Результат операции = {math.ceil(math.sqrt(second))}")
+    elif first == 7:
+        second = input("Введите желаемое число: ")
+        print(f"Результат операции = {math.sin(math.radians(second))}")
+    elif first == 8:
+        second = input("Введите желаемое число: ")
+        print(f"Результат операции = {math.cos(math.radians(second))}")
+    elif first == 9:
+        second = input("Введите желаемое число: ")
+        third = input("В какую степень число возвести: ")
+        print(f"Результат операции = {math.ceil(math.pow(second, third))}")
+    elif first > 9 or first < 1:
+        print("Выбранного варианта не существует!")
+        continue
